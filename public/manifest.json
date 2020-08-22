@@ -1,0 +1,9 @@
+{
+  "short_name": "Hack the 6ix",
+  "name": "Hack the 6ix 2020",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
