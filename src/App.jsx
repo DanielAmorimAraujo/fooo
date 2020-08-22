@@ -1,6 +1,7 @@
 import React from 'react';
 import Background from './office.svg'
 import PermanentDrawerRight from './drawer.jsx'
+import Stickies from 'stickies.jsx';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       width: '100vw',
       marginTop: '5%'
       }}>
+    <Stickies />
     </div>
     <PermanentDrawerRight />
     </>
