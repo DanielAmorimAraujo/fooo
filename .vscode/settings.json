@@ -1,0 +1,9 @@
+{
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "eslint.validate": ["javascript", "javascriptreact"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
+}

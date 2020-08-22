@@ -6,7 +6,7 @@ const config = {
     jest: true,
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
-  plugins: ['react', 'prettier', 'jsdoc'],
+  plugins: ['react', 'react-hooks', 'prettier', 'jsdoc'],
   rules: {
     // eslint
     'import/no-cycle': 0,
@@ -57,13 +57,6 @@ const config = {
       },
     ],
     'react/jsx-props-no-spreading': 0,
-    'react/self-closing-comp': [
-      'error',
-      {
-        component: true,
-        html: true,
-      },
-    ],
     // prettier
     'prettier/prettier': 'error',
   },
@@ -79,8 +72,7 @@ const config = {
 const js = {
   files: ['**/*.js', '**/*.jsx'],
   parserOptions: {
-    ecmaVersion: 2019,
-    sourceType: 'module',
+    project: './jsconfig.json',
     ecmaFeatures: {
       jsx: true,
     },
@@ -91,11 +83,13 @@ const js = {
     'plugin:jsdoc/recommended',
     'prettier',
     'prettier/react',
+    'airbnb',
   ],
   rules: Object.assign(
     {
       // eslint
       'import/no-unresolved': 0,
+      'no-use-before-define': 0,
       // jsdoc
       'jsdoc/require-returns-type': 0,
       'jsdoc/require-param-type': 0,
