@@ -1,21 +1,18 @@
 import React from 'react';
-import Background from './office.svg'
-import PermanentDrawerRight from './drawer.jsx'
+
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+import Fooo from 'components/fooo';
+import { theme } from './App.styles';
 
 const App = () => {
   return (
-    <>
-    <div style={{
-      backgroundImage: `url(${Background})`,
-      backgroundRepeat: 'no-repeat',
-      height: '100vh',
-      width: '100vw',
-      marginTop: '5%'
-      }}>
-    </div>
-    <PermanentDrawerRight />
-    </>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Fooo />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
