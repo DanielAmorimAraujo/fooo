@@ -19,6 +19,7 @@ import Appbar from 'components/appbar';
 import Stickies from 'components/stickies';
 import Layout from 'components/layout';
 import Drawer from 'components/drawer';
+import Custom from 'components/custom';
 
 import Nook from 'images/nook.png';
 import Tia from 'images/tia.png';
@@ -54,6 +55,8 @@ const Fooo = () => {
   const [status, setStatus] = useState(Object.keys(STATUSES)[0]);
   const [statusMessage, setStatusMessage] = useState(STATUSES[status].title);
   const [icon, setIcon] = useState(Object.keys(ICONS)[0]);
+  const [building, setBuilding] = useState(false);
+  const [custom, setCustom] = useState(false);
 
   const handleStatus = (s, m) => {
     setStatus(s);
@@ -68,15 +71,40 @@ const Fooo = () => {
     setIcon(s);
   };
 
+  const handleCustom = (b) => {
+    setCustom(b);
+  };
+
+  const handleBuilding = (b) => {
+    setBuilding(b);
+  };
+
   return (
     <>
-      <Appbar icon={icon} handleIcon={handleIcon} icons={ICONS} />
+      <Appbar
+        icon={icon}
+        handleIcon={handleIcon}
+        icons={ICONS}
+        custom={custom}
+        handleCustom={handleCustom}
+        building={building}
+        handleBuilding={handleBuilding}
+      />
       <Grid container>
         <Grid style={{ width: '210px' }}>
           <Stickies />
         </Grid>
         <Grid>
-          <Layout statusMessage={statusMessage} iconImage={ICONS[icon]} />
+          <div style={{ display: custom ? 'initial' : 'none' }}>
+            <Custom
+              building={building}
+              statusMessage={statusMessage}
+              iconImage={ICONS[icon]}
+            />
+          </div>
+          <div style={{ display: custom ? 'none' : 'initial' }}>
+            <Layout statusMessage={statusMessage} iconImage={ICONS[icon]} />
+          </div>
         </Grid>
       </Grid>
       <Drawer status={status} handleStatus={handleStatus} statuses={STATUSES} />

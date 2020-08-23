@@ -3,6 +3,8 @@ import React from 'react';
 import {
   AppBar as MuiAppBar,
   Toolbar,
+  Tooltip,
+  Button,
   IconButton,
   Menu,
   MenuItem,
@@ -10,6 +12,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+import { Build, Save } from '@material-ui/icons';
 import logo from 'images/fooo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -64,8 +67,88 @@ const Icon = ({ icon, handleIcon, icons }) => {
   );
 };
 
-const Appbar = ({ icon, handleIcon, icons }) => {
+const Appbar = ({
+  icon,
+  handleIcon,
+  icons,
+  custom,
+  handleCustom,
+  building,
+  handleBuilding,
+}) => {
   const classes = useStyles();
+
+  let customButtons = [];
+  if (custom) {
+    if (building) {
+      customButtons.push(
+        <Tooltip title="Save">
+          <Button
+            onClick={() => {
+              handleBuilding(false);
+            }}
+            variant="contained"
+            style={{
+              background: 'none',
+              border: 'none',
+              color: '#fffffa',
+              boxShadow: 'none',
+            }}>
+            <Save />
+          </Button>
+        </Tooltip>
+      );
+    } else {
+      customButtons.push(
+        <Button
+          onClick={() => {
+            handleCustom(false);
+          }}
+          variant="contained"
+          style={{
+            background: 'none',
+            border: 'none',
+            color: '#fffffa',
+            boxShadow: 'none',
+          }}>
+          Switch to Default
+        </Button>
+      );
+      customButtons.push(
+        <Tooltip title="Edit Office">
+          <Button
+            onClick={() => {
+              handleBuilding(true);
+            }}
+            variant="contained"
+            style={{
+              background: 'none',
+              border: 'none',
+              color: '#fffffa',
+              boxShadow: 'none',
+            }}>
+            <Build />
+          </Button>
+        </Tooltip>
+      );
+    }
+  } else {
+    customButtons.push(
+      <Button
+        onClick={() => {
+          handleCustom(true);
+        }}
+        variant="contained"
+        style={{
+          background: 'none',
+          border: 'none',
+          color: '#fffffa',
+          boxShadow: 'none',
+        }}>
+        Switch to Custom
+      </Button>
+    );
+  }
 
   return (
     <div className={classes.root}>
@@ -74,6 +157,7 @@ const Appbar = ({ icon, handleIcon, icons }) => {
           <div className={classes.title}>
             <img src={logo} style={{ height: '64px' }} alt="foo logo" />
           </div>
+          {customButtons.map((b) => b)}
           <Icon icon={icon} handleIcon={handleIcon} icons={icons} />
         </Toolbar>
       </MuiAppBar>
