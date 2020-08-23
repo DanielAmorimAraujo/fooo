@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Grid } from '@material-ui/core';
+
 import {
   Work,
   Wc,
@@ -14,8 +16,9 @@ import {
 } from '@material-ui/icons';
 
 import Appbar from 'components/appbar';
-import Drawer from 'components/drawer';
+import Stickies from 'components/stickies';
 import Layout from 'components/layout';
+import Drawer from 'components/drawer';
 
 import Bam from 'images/bam.png';
 import Marina from 'images/marina.png';
@@ -64,8 +67,15 @@ const Fooo = () => {
   return (
     <>
       <Appbar icon={icon} handleIcon={handleIcon} icons={ICONS} />
+      <Grid container>
+        <Grid style={{ width: '210px' }}>
+          <Stickies />
+        </Grid>
+        <Grid>
+          <Layout statusMessage={statusMessage} iconImage={ICONS[icon]} />
+        </Grid>
+      </Grid>
       <Drawer status={status} handleStatus={handleStatus} statuses={STATUSES} />
-      <Layout statusMessage={statusMessage} iconImage={ICONS[icon]} />
     </>
   );
 };
