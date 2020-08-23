@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.js": "/fooo/static/js/main.bc8a1359.chunk.js",
+    "main.js.map": "/fooo/static/js/main.bc8a1359.chunk.js.map",
+    "runtime-main.js": "/fooo/static/js/runtime-main.1483d7f3.js",
+    "runtime-main.js.map": "/fooo/static/js/runtime-main.1483d7f3.js.map",
+    "static/js/2.cda9b6a9.chunk.js": "/fooo/static/js/2.cda9b6a9.chunk.js",
+    "static/js/2.cda9b6a9.chunk.js.map": "/fooo/static/js/2.cda9b6a9.chunk.js.map",
+    "index.html": "/fooo/index.html",
+    "precache-manifest.439c6f42049494ed75f25c6a5a0ff35d.js": "/fooo/precache-manifest.439c6f42049494ed75f25c6a5a0ff35d.js",
+    "service-worker.js": "/fooo/service-worker.js",
+    "static/js/2.cda9b6a9.chunk.js.LICENSE.txt": "/fooo/static/js/2.cda9b6a9.chunk.js.LICENSE.txt",
+    "static/media/bam.png": "/fooo/static/media/bam.231684e0.png",
+    "static/media/beau.png": "/fooo/static/media/beau.3ccbe908.png",
+    "static/media/chair-2.png": "/fooo/static/media/chair-2.7fb40568.png",
+    "static/media/chair.png": "/fooo/static/media/chair.04cad58b.png",
+    "static/media/marina.png": "/fooo/static/media/marina.a97f30e1.png",
+    "static/media/nook.png": "/fooo/static/media/nook.6785c2a8.png",
+    "static/media/office.svg": "/fooo/static/media/office.fe6ceb57.svg",
+    "static/media/table-2.png": "/fooo/static/media/table-2.52f1aca7.png",
+    "static/media/table.png": "/fooo/static/media/table.f0d65e66.png",
+    "static/media/tia.png": "/fooo/static/media/tia.3233742e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1483d7f3.js",
+    "static/js/2.cda9b6a9.chunk.js",
+    "static/js/main.bc8a1359.chunk.js"
+  ]
+}
