@@ -34,7 +34,7 @@ const Spotify = () => {
         .then((response) => response.json())
         .then(
           (response) => {
-            setSong(response.item.name);
+            setSong(response?.item?.name);
           },
           (error) => {
             console.log(error);
@@ -45,9 +45,10 @@ const Spotify = () => {
 
   if (song)
     return (
-      <Typography>
+      <Typography style={{ marginRight: '16px' }}>
         <MusicNote />
         {`Currently playing: ${song}`}
+        <MusicNote />
       </Typography>
     );
 
