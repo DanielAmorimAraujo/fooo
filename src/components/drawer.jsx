@@ -84,7 +84,7 @@ const Drawer = ({ status, handleStatus, statuses }) => {
                   }}
                   style={{ paddingLeft: '32px', height: '56px' }}>
                   <ListItemIcon
-                    style={{ color: text !== status ? '#f6caca' : '#0a014f' }}>
+                    style={{ color: text !== status ? '#78cdd7' : '#0d5c63' }}>
                     {statuses[text].icon}
                   </ListItemIcon>
                 </ListItem>

@@ -3,13 +3,14 @@ import React from 'react';
 import {
   AppBar as MuiAppBar,
   Toolbar,
-  Typography,
   IconButton,
   Menu,
   MenuItem,
   Avatar,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+
+import logo from 'images/fooo.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    height: '64px',
   },
 }));
 
@@ -69,9 +71,9 @@ const Appbar = ({ icon, handleIcon, icons }) => {
     <div className={classes.root}>
       <MuiAppBar className={classes.appBar} position="fixed" color="secondary">
         <Toolbar>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Fooo
-          </Typography>
+          <div className={classes.title}>
+            <img src={logo} style={{ height: '64px' }} alt="foo logo" />
+          </div>
           <Icon icon={icon} handleIcon={handleIcon} icons={icons} />
         </Toolbar>
       </MuiAppBar>

@@ -37,12 +37,12 @@ const Layout = ({ statusMessage, iconImage }) => {
         <Group draggable x={48} y={84}>
           <Label y={-36}>
             <Tag
-              fill="#f6caca"
+              fill="#44a1a0"
               pointerDirection="down"
               pointerWidth={10}
               pointerHeight={5}
               lineJoin="round"
-              shadowColor="grey"
+              shadowColor="#78cdd7"
               shadowBlur={10}
               shadowOffset={10}
               shadowOpacity={0.5}
@@ -52,7 +52,7 @@ const Layout = ({ statusMessage, iconImage }) => {
               fontFamily="Calibri"
               fontSize={16}
               padding={5}
-              fill="white"
+              fill="#fffffa"
             />
           </Label>
           <Circle
