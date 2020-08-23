@@ -16,7 +16,6 @@
     "react-scripts": "3.4.3",
     "react-stickies": "0.0.16",
     "use-image": "^1.0.6",
-    "react-stickies": "0.0.16",
     "webfontloader": "^1.6.28"
   },
   "scripts": {

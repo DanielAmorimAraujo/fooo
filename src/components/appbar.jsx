@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+import Spotify from 'components/spotify';
 import logo from 'images/fooo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -74,6 +75,7 @@ const Appbar = ({ icon, handleIcon, icons }) => {
           <div className={classes.title}>
             <img src={logo} style={{ height: '64px' }} alt="foo logo" />
           </div>
+          <Spotify />
           <Icon icon={icon} handleIcon={handleIcon} icons={icons} />
         </Toolbar>
       </MuiAppBar>

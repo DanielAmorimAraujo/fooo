@@ -85,11 +85,3 @@ const Fooo = () => {
 };
 
 export default Fooo;
-
-/*
-<div>
-  <Typography paragraph align="center">
-    {'developed with 🥺'}
-  </Typography>
-</div>
-*/

@@ -10,12 +10,8 @@ export const theme = createMuiTheme({
     },
   },
   typography: {
-    h6: {
-      color: '#44a1a0',
-      fontFamily: 'Alata',
-    },
     body1: {
-      color: '#0d5c63',
+      color: '#fffffa',
       fontFamily: 'Alata',
     },
   },
