@@ -17,9 +17,11 @@ import Appbar from 'components/appbar';
 import Drawer from 'components/drawer';
 import Layout from 'components/layout';
 
+import Nook from 'images/nook.png';
+import Tia from 'images/tia.png';
+import Beau from 'images/beau.png';
 import Bam from 'images/bam.png';
 import Marina from 'images/marina.png';
-import Nook from 'images/nook.png';
 
 const STATUSES = {
   working: { icon: <Work fontSize="large" />, title: 'Working' },
@@ -38,9 +40,11 @@ const STATUSES = {
 };
 
 const ICONS = {
+  nook: Nook,
+  tia: Tia,
+  beau: Beau,
   bam: Bam,
   marina: Marina,
-  nook: Nook,
 };
 
 const Fooo = () => {
